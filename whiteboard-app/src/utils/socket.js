@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:3001"); // change when deployed
+const socket = io("https://collaborative-whiteboard-with-real-time-a1jn.onrender.com"); 
 export default socket;
 
 
