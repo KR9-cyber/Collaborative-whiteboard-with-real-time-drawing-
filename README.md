@@ -86,6 +86,8 @@ WHITEBOARD/
 ├─ jsconfig.json
 ├─ README.md
 ```
+![image](https://github.com/user-attachments/assets/296ae846-870e-43f5-90a6-8ecf11415e18)
+
 
 ## 💻 Setup Instructions to Run Locally
 
