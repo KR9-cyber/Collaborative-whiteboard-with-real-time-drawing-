@@ -111,6 +111,8 @@ cd Collaborative-whiteboard-with-real-time-drawing-
 
 3️⃣ **Edit Firebase Configuration** in `whiteboard-app/src/utils/firebase.js`
 
+
+```javascript
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getDatabase } from 'firebase/database';
@@ -128,6 +130,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const realtimeDb = getDatabase(app);
+```
+
 
 4️⃣ **Run the Server**:
 `bash
