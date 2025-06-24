@@ -1,0 +1,247 @@
+// import React from 'react';
+
+// const Toolbar = ({ activeTool, setActiveTool, color, setColor, brushSize, setBrushSize }) => {
+//   return (
+//     <div className="flex gap-4 mb-4">
+//       {['pencil', 'rectangle', 'circle', 'text', 'eraser'].map(tool => (
+//         <button
+//           key={tool}
+//           onClick={() => setActiveTool(tool)}
+//           className={`px-3 py-1 rounded ${activeTool === tool ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+//         >
+//           {tool}
+//         </button>
+//       ))}
+
+//       <input
+//         type="color"
+//         value={color}
+//         onChange={(e) => setColor(e.target.value)}
+//         title="Brush Color"
+//       />
+
+//       <input
+//         type="range"
+//         min="1"
+//         max="50"
+//         value={brushSize}
+//         onChange={(e) => setBrushSize(parseInt(e.target.value))}
+//         title="Brush Size"
+//       />
+//     </div>
+//   );
+// };
+
+// export default Toolbar;
+
+
+// import React from 'react';
+
+// const Toolbar = ({ activeTool, setActiveTool, color, setColor, brushSize, setBrushSize }) => {
+//   const handleToolClick = (tool) => {
+//     if (activeTool === tool) {
+//       setActiveTool(null); // Deselect if clicked again
+//     } else {
+//       setActiveTool(tool);
+//     }
+//   };
+
+//   return (
+//     <div className="flex gap-4 mb-4 items-center">
+//       {['pencil', 'rectangle', 'circle', 'text', 'eraser'].map(tool => (
+//         <button
+//           key={tool}
+//           onClick={() => handleToolClick(tool)}
+//           className={`px-3 py-1 rounded capitalize ${
+//             activeTool === tool ? 'bg-blue-600 text-white shadow-md' : 'bg-gray-100 text-black hover:bg-gray-200'
+//           }`}
+//         >
+//           {tool}
+//         </button>
+//       ))}
+
+//       <label className="ml-4">
+//         <input
+//           type="color"
+//           value={color}
+//           onChange={(e) => setColor(e.target.value)}
+//           title="Brush Color"
+//           className="w-8 h-8 p-0 border border-gray-300 rounded"
+//         />
+//       </label>
+
+//       <input
+//         type="range"
+//         min="1"
+//         max="50"
+//         value={brushSize}
+//         onChange={(e) => setBrushSize(parseInt(e.target.value))}
+//         title="Brush Size"
+//         className="ml-2"
+//       />
+//     </div>
+//   );
+// };
+
+// export default Toolbar;
+
+// import React from 'react';
+
+// const Toolbar = ({ 
+//   activeTool, 
+//   setActiveTool, 
+//   color, 
+//   setColor, 
+//   brushSize, 
+//   setBrushSize,
+//   onUndo,
+//   onRedo 
+// }) => {
+//   const handleToolClick = (tool) => {
+//     if (activeTool === tool) {
+//       setActiveTool(null); // Deselect if clicked again
+//     } else {
+//       setActiveTool(tool);
+//     }
+//   };
+  
+//   return (
+//     <div className="flex gap-4 mb-4 items-center">
+//       {['pencil', 'rectangle', 'circle', 'text', 'eraser'].map(tool => (
+//         <button
+//           key={tool}
+//           onClick={() => handleToolClick(tool)}
+//           className={`px-3 py-1 rounded capitalize ${
+//             activeTool === tool ? 'bg-blue-600 text-white shadow-md' : 'bg-gray-100 text-black hover:bg-gray-200'
+//           }`}
+//         >
+//           {tool}
+//         </button>
+//       ))}
+
+//       <label className="ml-4">
+//         <input
+//           type="color"
+//           value={color}
+//           onChange={(e) => setColor(e.target.value)}
+//           title="Brush Color"
+//           className="w-8 h-8 p-0 border border-gray-300 rounded"
+//         />
+//       </label>
+
+//       <input
+//         type="range"
+//         min="1"
+//         max="50"
+//         value={brushSize}
+//         onChange={(e) => setBrushSize(parseInt(e.target.value))}
+//         title="Brush Size"
+//         className="ml-2"
+//       />
+
+//       {/* ✅ New Undo/Redo Buttons */}
+//       <button
+//         onClick={onUndo}
+//         className="ml-4 px-3 py-1 rounded bg-gray-100 hover:bg-gray-200"
+//         title="Undo"
+//       >
+//         Undo
+//       </button>
+//       <button
+//         onClick={onRedo}
+//         className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200"
+//         title="Redo"
+//       >
+//         Redo
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default Toolbar;
+
+import React from 'react';
+
+const Toolbar = ({ 
+  activeTool, 
+  setActiveTool, 
+  color, 
+  setColor, 
+  brushSize, 
+  setBrushSize,
+  onUndo,
+  onRedo 
+}) => {
+  const handleToolClick = (tool) => {
+    if (activeTool === tool) {
+      setActiveTool(null);
+    } else {
+      setActiveTool(tool);
+    }
+  };
+  
+  const tools = ['pencil', 'rectangle', 'circle', 'text', 'eraser'];
+
+  return (
+    <div className="flex gap-3 mb-4 items-center flex-wrap">
+      {tools.map((tool) => (
+        <button
+          key={tool}
+          onClick={() => handleToolClick(tool)}
+          className={`px-3 py-1 rounded capitalize font-medium border 
+            ${activeTool === tool 
+              ? 'bg-blue-600 text-white border-blue-600 hover:bg-blue-700' 
+              : 'bg-gray-100 text-gray-800 border-gray-300 hover:bg-gray-200'
+            }`}
+        >
+          {tool}
+        </button>
+      ))}
+
+      <label className="ml-4 flex items-center">
+        <span className="mr-2 text-gray-700">Color:</span>
+        <input
+          type="color"
+          value={color}
+          onChange={(e) => setColor(e.target.value)}
+          title="Brush Color"
+          className="w-9 h-9 p-0 rounded border border-gray-300 cursor-pointer"
+        />
+      </label>
+
+      <div className="flex items-center ml-4">
+        <span className="mr-2 text-gray-700">Size:</span>
+        <input
+          type="range"
+          min="1"
+          max="50"
+          value={brushSize}
+          onChange={(e) => setBrushSize(parseInt(e.target.value))}
+          title="Brush Size"
+          className="cursor-pointer"
+        />
+      </div>
+
+      <div className="ml-4 flex gap-2">
+        <button
+          onClick={onUndo}
+          className="px-3 py-1 rounded font-medium border border-gray-300 bg-gray-100 text-gray-800 hover:bg-gray-200"
+          title="Undo"
+        >
+          Undo
+        </button>
+        <button
+          onClick={onRedo}
+          className="px-3 py-1 rounded font-medium border border-gray-300 bg-gray-100 text-gray-800 hover:bg-gray-200"
+          title="Redo"
+        >
+          Redo
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Toolbar;
+
+
