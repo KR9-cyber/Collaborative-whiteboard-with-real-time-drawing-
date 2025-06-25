@@ -188,7 +188,10 @@ This is where collaboration happens in real time:
 
 ![image](https://github.com/user-attachments/assets/734f2680-55ea-4aac-a894-6023f28c21cc)
 
+## 👤 Author
 
+**Kritagya Agrawal**  
+Chemical Engineering, Enrollment Number: 23112052
 
 ## 📄 License
 
