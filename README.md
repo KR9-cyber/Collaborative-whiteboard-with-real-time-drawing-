@@ -31,9 +31,11 @@ Ideal for teaching, brainstorming, design meetings, and any collaborative drawin
 * **Database:** Firestore (drawing persistence), Realtime Database (user status)
 * **Deployment:** Backend (Render), Frontend (Vercel)
 
-## 🚀 Demo Link
+##  🚀 Deployed Demo Links
 
-👉 [https://collaborative-whiteboard-with-real-seven.vercel.app/](https://collaborative-whiteboard-with-real-seven.vercel.app/)
+- **🌐 Frontend**: (https://collaborative-whiteboard-with-real-seven.vercel.app/)
+- **⚡️ Backend**: (https://collaborative-whiteboard-with-real-time-a1jn.onrender.com/)
+
 
 ## 🗺️ Project Architecture Diagram
 
