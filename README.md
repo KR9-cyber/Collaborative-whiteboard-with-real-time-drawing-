@@ -147,6 +147,24 @@ export const realtimeDb = getDatabase(app);
     `
 ✅ Done! Visit **[http://localhost:5173](http://localhost:5173)**.
 
+### ⚡️ How to Use the App
+
+1. ✅ **Start the Backend**  
+    - Ensure the backend is running.  
+    - Either use the live link: (https://collaborative-whiteboard-with-real-time-a1jn.onrender.com)  
+
+2. 🌐 **Open the Frontend**  
+    - Use the live link: (https://collaborative-whiteboard-with-real-seven.vercel.app)  
+
+3. 👥 **Create a Room**  
+    - Enter a room ID or click **Create New Room**.
+    - You’ll be prompted to **Enter Your Name**.
+
+4. ✏️ **Start Collaborating**  
+    - Begin drawing, adding text, or shapes.
+    - Other connected participants will instantly **see your changes** and their **online status**.
+
+
 ## 🌟 Preview of the App
 
 Here are some screenshots of the live application
